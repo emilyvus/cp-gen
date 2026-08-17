@@ -1,11 +1,5 @@
 # CP-GEN: Cluster-Aware Framework for Characterizing Variant Burden in Underrepresented Populations
 
-Emily Vu
-
-Horace Greeley High School (Chappaqua, New York 10514, United States)
-
-Contact: Emily Vu (emilyvu09@gmail.com)
-
 Public genomic variant databases are disproportionately built from individuals of European ancestry, limiting the characterization of variant burden in underrepresented populations. Within these populations, variant data are often unevenly distributed across genes, leaving many genes understudied. This paper introduces CP-GEN, a characterization tool that leverages population-cluster structures and multigene variant profiles for genome-level estimation of target-gene Single Nucleotide Polymorphisms (SNP) counts within selected disease-associated gene sets. Specifically, CP-GEN clusters populations using genomic variant data and validates the resulting structure through the Silhouette Coefficient, t-distributed Stochastic Neighbour Embedding, Principal Component Analysis, and gene-level statistical heatmaps. It then trains cluster-aware machine learning models to estimate genome-level SNP counts for target genes by exploiting variant patterns of genomes within the same population cluster. For related disease pairs, CP-GEN reuses the population cluster structure of the first disease, and uses genes shared between diseases as a feature bridge to estimate genome-level SNP counts for target genes in the second disease. CP-GEN was evaluated on two disease pairs, Amyotrophic Lateral Sclerosis and Frontotemporal Dementia (ALS/FTD), and Crohn's Disease and Ankylosing Spondylitis (CD/AS), with 1,350 trained machine learning models using variant data from 25 global populations and more than 3,000 genomes. In both case studies, CP-GEN significantly outperforms Cluster-Pair and Leave-One-Cluster-Out baselines. CP-GEN also achieves comparable mean Root Mean Square Error with a lower variance against GroupMean baseline. Further, CP-GEN provides genome-level SNP-count estimates while GroupMean can only use one constant estimate for all genomes in the target population. These results indicate that CP-GEN effectively leverages population-cluster structure and multigene SNP-count profiles for genome-level variant burden characterization.
 
 ## Publications & Presentations
@@ -57,3 +51,8 @@ Public genomic variant databases are disproportionately built from individuals o
 | 12 | `cd-as/cd2cd_cluster_aware_snp_count_estimation.ipynb` | In-disease CP-GEN for CD: cluster-aware ML models estimating genome-level SNP counts for the CD target genes, with major CD genes excluded from the features. |
 | 13 | `cd-as/cd2as_cross_disease_snp_count_estimation.ipynb` | Cross-disease transfer: reuses the CD cluster structure and the CD/AS shared bridge genes to estimate genome-level SNP counts for the AS targets (STAT3, HLA-B, ERAP1). |
 | 14 | `cd-as/cd_per-genome-cpgen_vs_groupmean.ipynb` | Per-genome SNP count estimation: CP-GEN vs. the GroupMean baseline for the CD/AS case study. |
+
+---------------
+
+Contact: Emily Vu (emilyvu09@gmail.com)
+
