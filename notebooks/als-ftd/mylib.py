@@ -35,7 +35,7 @@ genomes = {
 }
 
 def compute_t_test(mdf,population_name_1 = "GBR",population_name_2 = "ASW"):
-     t_statistic, p_value = stats.ttest_ind(mdf[population_name_1], mdf[population_name_2], equal_var=True)
+     t_statistic, p_value = stats.ttest_ind(mdf[population_name_1], mdf[population_name_2], equal_var=False)
      print(f"\nTwo-Sample Independent T-Test for {population_name_1} and {population_name_2}:")
      print(f"T-statistic: {t_statistic:.4f}")
      print(f"P-value: {p_value:.4f}")
